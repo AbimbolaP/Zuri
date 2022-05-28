@@ -1,35 +1,16 @@
-class Student:
-    # [assignment] Skeleton class. Add your code here
-    def __init__(self, name, age, tracks, score):
-        self.name = name
-        self.age = int (age)
-        self.track = list[tracks]
-        self.score = float (score)
-        pass
-    
-    #Methods
-    def change_name(self, new_name):
-        self.name = new_name
-        print('My name is',self.name)
-
-    def change_age(self, new_age):
-        self.age = new_age
-        print('I am', self.age)
-
-    def add_track(self, new_tracks):
-        self.track = new_tracks
-        print('I am in', self.track,'track')
-
-    def get_score(self, new_score):
-        return new_score
+# Check if two words are anagrams 
+# Example:
+# find_anagrams("hello", "check") --> False
+# find_anagrams("below", "elbow") --> True
 
 
+def find_anagram(word, anagram):
+    # [assignment] Add your code here
+    if sorted(word) == sorted(anagram):
+        return True
+    else:
+            return False
+            
 
-Bob = Student(name="Bob", age=26, tracks=["FE","BE"],score=20.90)
+find_anagram("hello","olleh")
 
-# Expected methods
-
-Bob.change_name("Peter")
-Bob.change_age(34)
-Bob.add_track("UI/UX")
-Bob.get_score(65)
